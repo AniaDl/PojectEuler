@@ -1,3 +1,4 @@
+
 def suma_fibonacci(liczba):
 
     krok1 = 1 
@@ -11,7 +12,6 @@ def suma_fibonacci(liczba):
             break
         krok1 = krok2
         krok2 = krok3
-        #print(krok3)
 
         # obliczenie sumy parzystych elementów ciągu fibonacciego
         if krok3 % 2 == 0:
@@ -27,5 +27,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

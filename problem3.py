@@ -1,22 +1,5 @@
 import math
-
-def prime_if(max_number):
-# prime factors
-    #max_number = 11
-    i = 0
-    for divider in range(2, math.floor((max_number+1)**0.5)):
-        #print(math.floor((max_number+1)**0.5))
-        #print(divider)
-        if max_number % divider == 0:
-            i = i + 1
-        else:
-            continue
-
-    if i > 0:
-        return False
-    elif i == 0:
-        return True
-
+from is_prime import is_prime
 
 # find the largest prime factor
 def main():
@@ -28,18 +11,11 @@ def main():
     elif number == 2:
         print('The highest prime number is %s.' %number )
     while back >= 2:
-        if number % back == 0: #check if the number can be divided without the rest
-            if prime_if(back) == True: #chcek if the number is the prime factor
+        if number % back == 0: # check if the number can be divided without the rest
+            if is_prime(back) == True: # check if the number is the prime factor
                 print('The highest prime number is %s' %back)
                 break
-        #print(back)
-        back = back - 1 
-
-
-    
-    #prime_T_F = prime_if(number)
-    #print(prime_T_F)
-    
+        back = back - 1
 
 
 if __name__ == "__main__":
